@@ -32,11 +32,6 @@ const CarForm = ({user}) => {
 
     return (
         <form>
-            <div className="bg-secondary rounded-3 p-4 mb-4">
-                <div className="d-flex align-items-center">
-                    <img className="rounded" src={UserAvatar} width="90" alt={user.name} />
-                </div>
-            </div>
             <div className="row gx-4 gy-3">
                 <div className="col-sm-6">
                     <label className="form-label" htmlFor="account-fn">{t('account_add_car_name_label')}</label>
@@ -65,7 +60,7 @@ const CarForm = ({user}) => {
                     </div>
                     <div className="col-sm-12">
                         <div className="mb-3">
-                            <label className="form-label" htmlFor="car-description">{t('account_add_car_price_label')} </label>
+                            <label className="form-label" htmlFor="car-description">{t('account_add_car_description_label')} </label>
                             <textarea className="form-control" onChange={(e) => setDescription(e.target.value)} id="car-description"></textarea>
                         </div>
                     </div>

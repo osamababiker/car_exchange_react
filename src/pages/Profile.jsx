@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logout } from "../redux/apiCalls";
 import { useNavigate } from "react-router-dom";
 
-import { SideMenu, CarForm } from "../components";
+import { Header, Footer, SideMenu, CarForm } from "../components";
 
 const Profile = () => { 
 
@@ -21,7 +21,9 @@ const Profile = () => {
   } 
 
   return (
-    <div className="container pb-5 mb-2 mb-md-4">
+    <>
+    <Header/>
+    <div className="container pb-5 mb-2 mb-md-4 my-4">
       <div className="row">
         <SideMenu carsList={carsList}/>
         <section className="col-lg-8">
@@ -33,6 +35,8 @@ const Profile = () => {
         </section>
       </div>
     </div> 
+    <Footer />
+    </>
   );
 }
 

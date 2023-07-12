@@ -12,7 +12,7 @@ export const login = async (dispatch, user) => {
     } catch (err) {
         dispatch(loginFailure(err.response.status));
     }
-}  
+}   
 
 export const register = async (dispatch, user) => {
     dispatch(loginStart());

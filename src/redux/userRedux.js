@@ -35,7 +35,6 @@ const userSlice = createSlice({
             state.currentUser = null;
             state.accessToken = null;
             cookies.set('token', null);
-            window.location.href = '/store';
         }
     }
 });

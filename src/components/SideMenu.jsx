@@ -46,7 +46,7 @@ const SideMenu = ({carsList}) => {
               </li>
               <li className="border-bottom mb-0">
                 <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/account/carsList"> 
-                  {t('account_side_menu_carsList_link')}  <span className="fs-sm text-muted me-auto">{carsList.quantity}</span> <i className="ci-heart opacity-60 me-2"></i> 
+                  {t('account_side_menu_carsList_link')}  <span className="fs-sm text-muted me-auto"> 4 </span> <i className="ci-heart opacity-60 me-2"></i> 
                 </RouterLink>
               </li>
               <li className="border-bottom mb-0">

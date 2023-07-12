@@ -20,7 +20,7 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault(); 
-    await login(dispatch, {email, password, device_name});
+    await login(dispatch, {email, password, device_name}); 
   }
 
   return (
