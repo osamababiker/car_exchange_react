@@ -1,21 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { publicRequest } from './requestMethod';
-import LoadingImage from './assets/images/capsule-loading.svg'; 
-import { Home, Register, Login } from "./pages";
+import { Home, Register, Login, Profile } from "./pages";
 
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <main className="App">
       <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/register' element={<Register />} />
+          <Route exact path='/profile' element={<Profile />} />
       </Routes>
-    </div>
+    </main>
   ); 
 }
 

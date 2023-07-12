@@ -5,7 +5,7 @@ const userSlice = createSlice({
     name: "user",
     initialState: { 
         currentUser: null,
-        accessToken: null,
+        accessToken: null, 
         isFetching: false,
         error: false,
         errorCode: '' 
