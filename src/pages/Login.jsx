@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault(); 
     await login(dispatch, {email, password, device_name}); 
   }
-
+ 
   return (
     <>
         <Header/>

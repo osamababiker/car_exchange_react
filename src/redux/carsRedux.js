@@ -16,7 +16,7 @@ const carsSlice = createSlice({
             state.isFetching = false; 
             state.error = false;
             state.errorCode = '';
-            state.currentList = action.payload.list;
+            state.currentList = action.payload;
             window.location.reload(false);
         },
         requestFailure: (state, action) => {

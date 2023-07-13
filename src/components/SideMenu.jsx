@@ -39,24 +39,21 @@ const SideMenu = ({carsList}) => {
             </div>
             <ul className="list-unstyled mb-0">
               <li className="border-bottom mb-0">
-                <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/account/orders">
-                  {t('account_side_menu_orders_link')}  
+                <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/">
+                  {t('account_side_menu_cars_link')}  
                   <span className="fs-sm text-muted me-auto"></span> <i className="ci-bag opacity-60 me-2"></i> 
                 </RouterLink>
               </li>
               <li className="border-bottom mb-0">
-                <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/account/carsList"> 
-                  {t('account_side_menu_carsList_link')}  <span className="fs-sm text-muted me-auto"> 4 </span> <i className="ci-heart opacity-60 me-2"></i> 
-                </RouterLink>
-              </li>
-              <li className="border-bottom mb-0">
-                <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/account"> 
+                <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/profile"> 
                   {t('account_side_menu_info_link')} <span className="fs-sm text-muted me-auto"></span><i className="ci-user opacity-60 me-2"></i>
                 </RouterLink>
               </li>
-              <li className="d-lg-none border-top mb-0">
+              <li className="border-top mb-0">
                 <a className="nav-link-style d-flex align-items-center px-4 py-3" onClick={handleLogout} href="#logout"> 
-                  {t('account_signout_link')} <i className="ci-sign-out opacity-60 me-2"></i> 
+                  {t('account_signout_link')} <span className="fs-sm text-muted me-auto">
+                    <i className="ci-sign-out opacity-60 me-2"></i> 
+                    </span>
                 </a>
               </li>
             </ul>

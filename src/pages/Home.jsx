@@ -1,13 +1,27 @@
 import React from 'react';
-import { Header, Footer } from "../components";
+import { useState, useEffect } from 'react';
+import { publicRequest } from '../requestMethod';
+import { Header, Footer, Cars } from "../components";
 
 const Home = () => {
+
+  const [carsList, setCarsList] = useState([]);
+  useEffect(() => {
+    const fetchCars = async () => {
+      try {
+        const res = await publicRequest.get('/cars');
+        console.log(res.data);
+        setCarsList(res.data);
+      } catch (err) {console.log(err)}
+    }
+    fetchCars();
+  },[]);
 
 
   return (
     <>
         <Header/>
-          home
+         <Cars cars={carsList} />
         <Footer />
     </>
   )

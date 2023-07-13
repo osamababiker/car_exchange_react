@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from "react-i18next";
 import { Link as RouterLink , useNavigate} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import i18next from 'i18next';
 import cookies from 'js-cookie';
 import { useEffect } from 'react';
@@ -10,8 +11,9 @@ import ArFlag from '../assets/images/flags/ar.png';
 
 
 const Header = () => {
-  
+
   const { t } = useTranslation();
+  const user = useSelector((state) => state.user.currentUser);
   const languages = [
     {code: 'en',name: 'English',country_code: 'gb',dir: 'ltr'},
     { code: 'ar',name: 'العربية',country_code: 'sa',dir: 'rtl'}, 
@@ -21,21 +23,16 @@ const Header = () => {
   const currentLang = languages.find(lang => lang.code === currentLangCode);
 
   const navigate = useNavigate();
-  useEffect(() => {
-    document.body.dir = currentLang.dir;
-    if(currentLang.code === 'ar')  
-      document.body.style.fontFamily = 'Tajawal, sans-serif';
-  }, [currentLang]);
 
-  return (  
+  return (
     <header className="shadow-sm">
       <div className="topbar topbar-dark bg-dark">
-        <div className="container"> 
+        <div className="container">
           <div>
             <div className="topbar-text dropdown disable-autohide">
               <a className="topbar-link dropdown-toggle" href="#home" data-bs-toggle="dropdown">
                 <img className={`${currentLang === 'ar' ? 'ms-2' : 'me-2'}`} src={currentLangCode === 'ar' ? ArFlag : EnFlag} width="20" alt={ currentLangCode === 'ar' ? t('arabic') : t('english') } /> { currentLangCode === 'ar' ? t('arabic') : t('english') }  
-              </a> 
+              </a>
               <ul className={`dropdown-menu my-1 ${currentLangCode === 'ar' ? "text-right" : ""}`}>
                 <li><button className="dropdown-item pb-1" onClick={() => i18next.changeLanguage('en')}><img className="me-2" src={EnFlag} width="20" alt={ t('english') } /> { t('english') } </button></li>
                 <li><button className="dropdown-item pb-1" onClick={() => i18next.changeLanguage('ar')}><img className="me-2" src={ArFlag} width="20" alt={ t('arabic') } /> { t('arabic') } </button></li>
@@ -69,15 +66,23 @@ const Header = () => {
               <img src="" width="74" alt={ t('site_name') } />
             </RouterLink>
             <div className="input-group d-none d-lg-flex flex-nowrap mx-4"><i className="ci-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
-              <input onChange={(e) => navigate(`/shop/${e.target.value}`)} className="form-control top-search-bar rounded-start w-100" type="text" placeholder={ t('top_header_search_placeholder') } />
+              <input className="form-control top-search-bar rounded-start w-100" type="text" placeholder={ t('top_header_search_placeholder') } />
             </div>
             <div className="navbar-toolbar d-flex flex-shrink-0 align-items-center">
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span className="navbar-toggler-icon"></span></button><a className="navbar-tool navbar-stuck-toggler" href="/"><span className="navbar-tool-tooltip">Toggle menu</span>
                 <div className="navbar-tool-icon-box"><i className="navbar-tool-icon ci-menu"></i></div></a>
-                <RouterLink className="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" to="/login">
-                  <div className="navbar-tool-icon-box"><i className="navbar-tool-icon ci-user"></i></div>
-                  <div className="navbar-tool-text ms-n3"><small> {t('top_header_signin_link')} </small> {t('top_header_account_link')} </div>
-                </RouterLink>
+                {
+                  user ?
+                  <RouterLink className="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" to="/profile">
+                    <div className="navbar-tool-icon-box"><i className="navbar-tool-icon ci-user"></i></div>
+                    <div className="navbar-tool-text ms-n3"><small> {t('top_header_signin_link')} </small> {t('top_header_account_link')} </div>
+                  </RouterLink>
+                  :
+                  <RouterLink className="navbar-tool ms-1 ms-lg-0 me-n1 me-lg-2" to="/login">
+                    <div className="navbar-tool-icon-box"><i className="navbar-tool-icon ci-user"></i></div>
+                    <div className="navbar-tool-text ms-n3"><small> {t('top_header_signin_link')} </small> {t('top_header_account_link')} </div>
+                  </RouterLink>
+                }
               <div className={`navbar-tool dropdown ${currentLangCode === 'ar' ? 'me-3' : 'ms-3'}`}>
                 <RouterLink className='navbar-tool-icon-box bg-secondary dropdown-toggle' to='/cart'>
                   <span className="navbar-tool-label">4</span><i className="navbar-tool-icon ci-cart"></i>

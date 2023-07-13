@@ -1,10 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateUser } from "../redux/apiCalls";
+import { addCar } from "../redux/apiCalls";
 import { useState } from 'react';
-import UserAvatar from '../assets/images/user.png';
-
 
 const CarForm = ({user}) => {
 
@@ -18,17 +16,22 @@ const CarForm = ({user}) => {
     const [description, setDescription] = useState("");
     const userId = user.id;
 
+    const fileChange = (e) => {
+        setPicture(e.files[0]);
+    };
+
     const handelAdd = (e) => {
         e.preventDefault();
-        updateUser(dispatch, {
-          userId,
-          name,
-          price,
-          model,
-          description,
-          picture
-        });
-      }
+        const formData = new FormData();
+        formData.append("userId",userId);
+        formData.append("name",name);
+        formData.append("price",price);
+        formData.append("model",model);
+        formData.append("description",description);
+        formData.append("picture",picture,picture.name);
+        console.log(formData);
+        addCar(dispatch, formData);
+    }
 
     return (
         <form>
@@ -39,7 +42,7 @@ const CarForm = ({user}) => {
                 </div>
                 <div className="col-sm-6">
                     <label className="form-label" htmlFor="car-picture">{t('account_add_car_picture_label')}</label>
-                    <input className="form-control"  onChange={(e) => setPicture(e.target.value)} type="file" id="car-picture"  required />
+                    <input className="form-control"  onChange={(e) => fileChange(e.target) } type="file" id="car-picture"  required />
                 </div>
                     <div className="col-sm-12">
                         <div className="mb-3">
