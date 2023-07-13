@@ -67,13 +67,13 @@ const Register = () => {
                     </div>
                   </div>
                   <div className="mb-3 d-flex flex-wrap justify-content-between">
-                  <RouterLink to="/login">
+                  <RouterLink to="/login"> 
                     <span style={{ cursor: "pointer" }} className="fs-sm">
                       {t('signin_modal_signin_btn')}
                     </span>
                   </RouterLink>
                 </div>
-                  <button onClick={handelRegister} disabled={isFetching}  className={`btn btn-primary btn-shadow d-block w-100 ${isFetching ? ' btn-disabled ' : ''}`} type="submit">{t('signin_modal_signup_btn')}</button>
+                  <button onClick={handelRegister}  className='btn btn-primary btn-shadow d-block w-100' type="submit">{t('signin_modal_signup_btn')}</button>
                   {error && <div className='alert alert-danger mt-2' role="alert">{ errorCode === 401 ? t('signin_modal_error') : t('general_error')  }</div>  }
                 </form>
               </div>

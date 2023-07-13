@@ -19,7 +19,7 @@ const CarForm = ({user}) => {
     const fileChange = (e) => {
         setPicture(e.files[0]);
     };
-
+ 
     const handelAdd = (e) => {
         e.preventDefault();
         const formData = new FormData();
@@ -29,7 +29,6 @@ const CarForm = ({user}) => {
         formData.append("model",model);
         formData.append("description",description);
         formData.append("picture",picture,picture.name);
-        console.log(formData);
         addCar(dispatch, formData);
     }
 

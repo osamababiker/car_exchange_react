@@ -1,31 +1,5 @@
 {
-    "site_name": "Jinju cosmetics",
-
-    "index_page_home_link": "Home",
-    "index_page_about_link": "About",
-    "index_page_products_link": "Our Products",
-    "index_page_contact_link": "Contact Us",
-    "index_page_store_btn": "Go to Store",
-    "index_page_en_link": "English",
-    "index_page_ar_link": "Arabic",
-    "index_page_hero_title": "Take Care of Your Beauty",
-    "index_page_hero_text": "Offers and discounts from Jinju Cosmetics on all cosmetics and makeup materials",
-    "index_page_hero_store_btn": "Start Shopping Now",
-    "index_page_hero_about_btn": "About Jinju",
-    "index_page_about_section_title": "About Us",
-    "index_page_about_section_text_one": "Learn More ",
-    "index_page_about_section_text_two": "About Us",
-    "index_page_products_section_title": "Our Products",
-    "index_page_products_section_text_one": "Check Out",
-    "index_page_products_section_text_two": "Our Products",
-    "index_page_reviews_section_title": "Our Clients Reviews",
-    "index_page_reviews_section_text_one": "What Are They ",
-    "index_page_reviews_section_text_two": "Saying Jinju",
-    "index_page_footer_section_address": "Address",
-    "index_page_footer_section_contacts": "Contact Us",
-    "index_page_footer_section_opening_hours": "Opening Hours",
-    "index_page_footer_section_follow_us": "Follow Us",
-    
+    "site_name": "Cars Exschange",
 
 
     "top_header_categories_menu": "All Categories",
@@ -33,125 +7,12 @@
     "top_header_account_link": "My Account",
     "top_header_cart_link": "My Cart",
     "top_header_cart_total": "Subtotal",
-    "top_header_cart_checkout_link": "Checkout",
     "top_header_search_placeholder": "Search for products",
     
 
-    "main_menu_home_link": "Home",
-    "main_menu_shop_link": "Shop",
     "main_menu_account_link": "Account",
-    "main_menu_contact_us_link": "Contact Us",
-    "main_menu_blog_link": "Blog",
-    "main_menu_order_history_link": "Orders History",
-    "main_menu_whishlist_link": "Wishlist",
     "main_menu_profile_settings_link": "Profile Settings",
     "main_menu_password_recovery_link": "Password Recovery",
-
-
-    "hero_banner_shop_btn": "Shop Now",
-
-
-    "trending_products_section_title": "Trending Products",
-    "trending_products_more_btn": "More Products",
-    "trending_products_add_to_cart_btn": "Add to Cart",
-    "trending_products_quick_view_btn": "Quick View",
-
-
-    "promo_banner_section_badge": "Limited Offer",
-    "promo_banner_section_action_btn": "Buy Now",
-    "promo_banner_section_text": "Offers and discounts from Jinju Cosmetics on all cosmetics and makeup materials",
-
-
-    "products_section_bestsellers_title": "Bestsellers",
-    "products_section_new_arrivals_title": "New arrivals",
-    "products_section_top_rated_title": "Top rated",
-    "products_section_view_more": "View More",
-
-
-    "blogs_section_title": "Latest blogs ",
-    "blogs_section_view_more": "View More", 
-
-    "toolbar_wish_list_link": "Wishlist",
-
-
-    "shop_page_breadcrumb_home_link": "Home",
-    "shop_page_breadcrumb_shop_link": "shop",
-    "shop_page_breadcrumb_title": "Browse Our Products",
-    "shop_page_filter_categories_title": "Categories",
-    "shop_page_filter_search_placeholder": "Search For Products",
-    "shop_page_filter_price_title": "Less than ",
-    "shop_page_filter_category_title": "Filter by Category",
-    "shop_page_products_sort_by_label": "Sort By",
-    "shop_page_products_sort_by_newest": "Newest",
-    "shop_page_products_sort_by_price_asc": "Low - Hight Price",
-    "shop_page_products_sort_by_price_desc": "Hight - Low Price",
-    "shop_page_products_add_to_cart_btn": "Add to Cart",
-    "shop_page_products_quick_view_btn": "Quick View",
-
-
-    "product_page_breadcrumb_home_link": "Home",
-    "product_page_breadcrumb_product_link": "Product Details",
-    "product_page_similar_products_title": "Similar Products",
-    "product_page_action_color_label": "Choose Color",
-    "product_page_action_add_to_cart": "Add to Cart",
-    "product_page_action_add_to_whishlist": "Add to Wishlist",
-    "product_page_description_label": "Product Description",
-    "product_page_avilable_lable": "Product available",
-    "product_page_not_avilable_lable": "Product not available",
-
-
-    "cart_page_breadcrumb_home_link": "Home",
-    "cart_page_breadcrumb_cart_link": "My Cart",
-    "cart_page_breadcrumb_cart_title": "My Shopping Cart",
-    "cart_page_title": "Shopping Cart",
-    "cart_page_shopping_btn": "Continue shopping ",
-    "cart_page_products_color_label": "Color",
-    "cart_page_products_size_label": "Size",
-    "cart_page_products_quantity_label": "Quantity",
-    "cart_page_products_remove_btn": "Remove",
-    "cart_page_products_update_cart": "Update Cart",
-    "cart_page_checkout_total": "Subtotal",
-    "cart_page_checkout_comments": "Additional comments",
-    "cart_page_promo_code_label": "Please provide promo code",
-    "cart_page_promo_code_placeholder": "Promo Code",
-    "cart_page_promo_code_btn": "Apply Promo Code",
-    "cart_page_checkout_btn": "Proceed to Checkout",
-
-
-    "checkout_page_breadcrumb_home_link": "Home",
-    "checkout_page_breadcrumb_checkout_link": "Checkout",
-    "checkout_page_breadcrumb_checkout_title": "Send Your Order",
-    "checkout_page_back_to_cart_link": "Back to Cart",
-    "checkout_page_checkout_btn": "Proceed to Payment",
-    "checkout_page_steps_cart": "Shopping Cart",
-    "checkout_page_steps_details": "Details",
-    "checkout_page_steps_payment": "Payment",
-    "checkout_page_steps_summary": "Order summary",
-    "checkout_page_edit_profile_btn": "Edit profile",
-    "checkout_page_shipping_title": "Shipping address",
-    "checkout_page_shipping_firstname": "First Name",
-    "checkout_page_shipping_lastname": "Last Name",
-    "checkout_page_shipping_phone": "Phone Number",
-    "checkout_page_shipping_email": "Email Address",
-    "checkout_page_shipping_country": "Country",
-    "checkout_page_shipping_city": "City",
-    "checkout_page_shipping_address": "Address",
-    "checkout_page_summary_title": "Order summary",
-    "checkout_page_summary_total": "Subtotal",
-    "checkout_page_summary_discount": "Discount",
-    "checkout_page_summary_promo_code_label": "Please provide promo code",
-    "checkout_page_summary_promo_code_placeholder": "Promo code",
-    "checkout_page_summary_promo_code_btn": "Apply promo code",
-    "checkout_page_payment_title": "Pay with Credit Card",
-    "checkout_page_payment_accepted_card": "We accept following credit cards",
-    "checkout_page_payment_card_number": "Card Number",
-    "checkout_page_payment_full_name": "Full Name",
-    "checkout_page_payment_submit": "Submit",
-    "checkout_page_complete_title": "Thank you for your order!",
-    "checkout_page_complete_text": "Your order has been placed and will be processed as soon as possible. Make sure you make note of your order number, which is  You will be receiving an email shortly with confirmation of your order",
-    "checkout_page_complete_label": "You can now",
-    "checkout_page_complete_btn": "Go back shopping",
-
 
     "account_breadcrumb_home_link": "Home",
     "account_breadcrumb_account_link": "My Account",
@@ -165,35 +26,20 @@
     "account_add_car_price_label": "Opening Price",
     "account_add_car_description_label": "Car Description",
     "account_add_car_submit_btn": "Add Car",
-    
-    "account_orders_sort_orders_label": "Sort Orders",
-    "account_orders_status_all": "All",
-    "account_orders_status_in_delivery": "In Delivery",
-    "account_orders_status_delivered": "Delivered",
-    "account_orders_status_progress": "In Progress",
-    "account_orders_status_canceled": "Canceled",
-    "account_orders_table_order": "Order",
-    "account_orders_table_date": "Date of Order",
-    "account_orders_table_payment_method": "Payment Method",
-    "account_orders_table_status": "Status",
-    "account_orders_table_total": "Total",
+
+    "cars_place_bid_btn": "Place new Bid",
+    "cars_place_bid_price": "Add Your Price",
+    "cars_opening_price_label": "Opening Price",
+    "cars_height_price": "the highest price",
+
+
     "account_side_menu_title": "Dashboard",
     "account_side_menu_label": "Account menu",
     "account_side_menu_cars_link": "My Cars",
-    "account_side_menu_orders_label": "List of Previus Orders",
     "account_side_menu_carsList_link": "cars List",
     "account_side_menu_account_settings_label": "Account settings",
     "account_side_menu_info_link": "Profile info",
-    "account_wishlist_label": "List of items you added to wishlist",
     "account_wishlist_remove_btn": "Remove",
-
-
-    "blog_page_title": "Our Blog",
-    "blog_page_breadcrumb_home_link": "Home",
-    "blog_page_breadcrumb_blog_link": "Blog",
-    "blog_page_side_bar_label": "Sidebar",
-    "blog_page_trending_posts_title": "Other Articales",
-    "blog_page_no_posts": "No articales to show now",
 
 
     "signin_modal_signin_btn": "Sign in",
@@ -209,66 +55,9 @@
     "signin_modal_name_placeholder": "Enter your full name",
     "signin_modal_confirm_password_label": "Confirm password",
     "signin_modal_confirm_password_placeholder": "Please Confirm password",
-    "signin_modal_phone_label": "Phone Number",
-    "signin_modal_phone_placeholder": "Enter your phone number",
-    "signin_modal_country_label": "Select your country",
-    "signin_modal_city_label": "Select your city",
     "signin_modal_error": "Email and/or Password not correct",
 
-    
-    "forget_password_page_title": "Forgot your password ?",
-    "forget_password_page_step_desc": "Change your password in three easy steps. This helps to keep your new password secure.",
-    "forget_password_page_step_one": "Fill in your email address below.",
-    "forget_password_page_step_Two": "We'll email you a temporary link.",
-    "forget_password_page_step_three": "Click that link to change your password on our secure website.",
-    "forget_password_page_email_label": "Enter your email address",
-    "forget_password_page_success_message": "Email has been sent successfully",
-    "forget_password_page_btn": "Send Me Email",
 
-
-    "password_reset_page_title": "Change your password",
-    "password_reset_page_email_label": "Enter your email address",
-    "password_reset_page_email_hint": "Your Email",
-    "password_reset_page_password_label": "Enter your new password",
-    "password_reset_page_password_hint": "Your Password",
-    "password_reset_page_password_confirmation_label": "Confirm your password",
-    "password_reset_page_password_confirmation_hint": "Confirm password",
-    "password_reset_page_success_message": "Password has been change successfully, Now you can Login",
-    "password_reset_page_btn": "Account Recovery",
-
-
-    "contact_us_page_title": "Contact Us",
-    "contact_us_page_address_label": "Main store address",
-    "contact_us_page_working_hours_label": "Working hours",
-    "contact_us_page_phone_number_label": "Phone numbers",
-    "contact_us_page_email_label": "Email Address",
-
-
-    "errors_404_message": "We can't seem to find the page you are looking for.",
-    
-
-
-    "footer_section_account_link": "Your Account",
-    "footer_section_orders_link": "Previus Orders",
-    "footer_section_about_us_link": "About Us",
-    "footer_section_contact_us": "Contact Us",
-    "footer_section_newsletter_title": "Stay Informed",
-    "footer_section_newsletter_placeholder": "Your Email",
-    "footer_section_newsletter_btn": "Subscribe",
-    "footer_section_app_download": "Download our app",
-    "footer_section_payment_title": "Secure online payment",
-    "footer_section_payment_text": "We possess SSL / Secure сertificate",
-    "footer_section_support_title": "24/7 customer support",
-    "footer_section_support_text": "Friendly 24/7 customer support",
-    "footer_section_money_back_title": "Money back guarantee",
-    "footer_section_money_back_text": "Money back guarantee",
-    "footer_section_fast_delivery_title": "Fast  delivery",
-    "footer_section_fast_delivery_text": "Fast delivery for all orders",
-    "footer_section_privacy_link": "Privacy",
-    "footer_section_terms_link": "Terms of use",
-    "footer_section_app_store": "App Store",
-    "footer_section_google_play": "Google Play",
-    "footer_section_copy_right": "© All rights reserved. Made by",
 
 
     "aed": "AED",

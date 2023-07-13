@@ -10,7 +10,6 @@ const Home = () => {
     const fetchCars = async () => {
       try {
         const res = await publicRequest.get('/cars');
-        console.log(res.data);
         setCarsList(res.data);
       } catch (err) {console.log(err)}
     }

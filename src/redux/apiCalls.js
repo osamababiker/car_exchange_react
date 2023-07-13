@@ -20,7 +20,7 @@ export const register = async (dispatch, user) => {
         const res = await publicRequest.post("/auth/register", user);
         dispatch(loginSuccess(res.data));
     } catch (err) {
-        dispatch(loginFailure(err.response.status)); 
+        dispatch(loginFailure(err)); 
     } 
 } 
 
@@ -60,6 +60,30 @@ export const addCar = async (dispatch, car) => {
     dispatch(requestStart()); 
     try {
         const res = await userRequest.post("/cars/store", car);
+        dispatch(requestSuccess(res.data));
+    } catch (err) {
+        dispatch(requestFailure(err.response.status));
+    }
+} 
+
+
+/** ============================================== */
+/** bids api calls  */
+
+export const bids = async (dispatch) => {
+    dispatch(requestStart()); 
+    try {
+        const res = await publicRequest.get("/bids");
+        dispatch(requestSuccess(res.data));
+    } catch (err) {
+        dispatch(requestFailure(err.response.status));
+    }
+}  
+
+export const addBids = async (dispatch, bid) => { 
+    dispatch(requestStart()); 
+    try {
+        const res = await userRequest.post("/bids/store", bid);
         dispatch(requestSuccess(res.data));
     } catch (err) {
         dispatch(requestFailure(err.response.status));

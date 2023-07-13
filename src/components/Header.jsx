@@ -4,10 +4,10 @@ import { Link as RouterLink , useNavigate} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import i18next from 'i18next';
 import cookies from 'js-cookie';
-import { useEffect } from 'react';
 
 import EnFlag from '../assets/images/flags/en.png';
 import ArFlag from '../assets/images/flags/ar.png';
+import Logo from '../assets/images/logo.svg';
 
 
 const Header = () => {
@@ -60,10 +60,10 @@ const Header = () => {
         <div className="navbar navbar-expand-lg navbar-light">
           <div className="container">
             <RouterLink className="navbar-brand d-none d-sm-block me-3 flex-shrink-0" to="/">
-              <img src="" width="142" alt={ t('site_name') } />
+              <img src={Logo} width="142" alt={ t('site_name') } />
             </RouterLink>
             <RouterLink className="navbar-brand d-sm-none me-2" to="/">
-              <img src="" width="74" alt={ t('site_name') } />
+              <img src={Logo} width="74" alt={ t('site_name') } />
             </RouterLink>
             <div className="input-group d-none d-lg-flex flex-nowrap mx-4"><i className="ci-search position-absolute top-50 start-0 translate-middle-y ms-3"></i>
               <input className="form-control top-search-bar rounded-start w-100" type="text" placeholder={ t('top_header_search_placeholder') } />
