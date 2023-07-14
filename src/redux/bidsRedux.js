@@ -9,17 +9,17 @@ const bidsSlice = createSlice({
         errorCode: '' 
     },
     reducers: {
-        requestStart: (state) => {
+        bidRequestStart: (state) => {
             state.isFetching = true;
         },
-        requestSuccess: (state, action) => {
+        bidRequestSuccess: (state, action) => {
             state.isFetching = false; 
             state.error = false;
             state.errorCode = '';
             state.currentList = action.payload;
-            window.location.reload(false);
+            window.location.reload(false); 
         },
-        requestFailure: (state, action) => {
+        bidRequestFailure: (state, action) => {
             state.isFetching = false;
             state.error = true;
             state.errorCode = action.payload
@@ -28,5 +28,5 @@ const bidsSlice = createSlice({
 });
 
 
-export const { requestStart, requestSuccess, requestFailure } = bidsSlice.actions;
+export const { bidRequestStart, bidRequestSuccess, bidRequestFailure } = bidsSlice.actions;
 export default bidsSlice.reducer;

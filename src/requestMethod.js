@@ -1,8 +1,8 @@
 import axios from 'axios';
 import cookies from 'js-cookie';
 
-const BASE_URL = "http://localhost:8000/api";
-const UPLOAD_URL = "http://localhost:8000/upload";
+const BASE_URL = "http://127.0.0.1:8000/api";
+const UPLOAD_URL = "http://127.0.0.1:8000/upload";
 const TOKEN = cookies.get('token'); 
 
 export const publicRequest = axios.create({

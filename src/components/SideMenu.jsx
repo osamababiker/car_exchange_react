@@ -7,7 +7,7 @@ import { logout } from "../redux/apiCalls";
 import UserAvatar from '../assets/images/user.png';
 
 
-const SideMenu = ({carsList}) => {
+const SideMenu = () => {
 
   const { t } = useTranslation();
   const user = useSelector((state) => state.user.currentUser);

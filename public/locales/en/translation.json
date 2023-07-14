@@ -74,5 +74,6 @@
     "next": "Next",
     "prev": "Previus",
     "general_error": "Connection error, please try again later",
-    "no_item_to_display": "No Item to display right now"
+    "no_item_to_display": "No Item to display right now",
+    "auth_required": "Please Sign in to place bid"
 }

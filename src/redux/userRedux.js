@@ -21,7 +21,7 @@ const userSlice = createSlice({
             state.currentUser = action.payload.user;
             state.accessToken = action.payload.token;
             cookies.set('token', state.accessToken);
-            window.location.replace('#/profile'); 
+            window.location.reload(false);
         },
         loginFailure: (state, action) => {
             state.isFetching = false; 

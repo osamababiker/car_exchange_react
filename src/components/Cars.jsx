@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { uploadUrl } from '../requestMethod';
 import { Link as RouterLink } from 'react-router-dom';
@@ -19,7 +19,7 @@ const Cars = ({cars}) => {
   const [bid, setBid] = useState("");
 
   const handleBid = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     const formData = new FormData();
     formData.append("userId",user.id);
     formData.append("carId",e.target.dataset.id);
@@ -33,7 +33,7 @@ const Cars = ({cars}) => {
       { cars.map(car => (
         <div key={car.id} className="col-lg-4 col-md-6">
           <div className="shadow-lg p-3 mb-5 bg-white rounded">
-            <RouterLink className='d-block text-decoration-0 px-2' to={`/cars/${car.id}`}>
+            <RouterLink className='d-block text-decoration-0 px-2' to="/">
               <div className="position-relative mb-2">
                 <img className="w-100" src={uploadUrl + "/cars/" + car.picture} alt={car.name} />
               </div>
@@ -56,7 +56,14 @@ const Cars = ({cars}) => {
                 <h6 className="fs-sm p-2 badge bg-success w-100"> {t('cars_height_price')} : { car.bids_max_price } {t('aed')} </h6>
                 : <h6 className="fs-sm p-2 w-100"> </h6>
               }
-              <a href={`#bid-modal-${car.id}`}  data-bs-toggle="modal" className="btn btn-outline-primary w-100">{t('cars_place_bid_btn')}</a>
+              {
+                user ? 
+                <a href={`#bid-modal-${car.id}`}  data-bs-toggle="modal" className="btn btn-outline-primary w-100">{t('cars_place_bid_btn')}</a>
+                : 
+                <RouterLink className="btn btn-outline-primary w-100" to="/login">{t('auth_required')}</RouterLink>
+                
+              }
+              
             </div>
           </div>
 
@@ -81,7 +88,6 @@ const Cars = ({cars}) => {
               </div>
             </div>
           </div>
-
 
         </div>
         

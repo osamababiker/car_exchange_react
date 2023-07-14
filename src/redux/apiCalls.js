@@ -1,5 +1,6 @@
 import { loginFailure, loginStart, loginSuccess, logoutSuccess } from "./userRedux";
 import { requestStart, requestSuccess, requestFailure } from "./carsRedux";
+import { bidRequestStart, bidRequestSuccess, bidRequestFailure } from "./bidsRedux";
 import { publicRequest, userRequest } from "../requestMethod";
 
 
@@ -64,7 +65,7 @@ export const addCar = async (dispatch, car) => {
     } catch (err) {
         dispatch(requestFailure(err.response.status));
     }
-} 
+}  
 
 
 /** ============================================== */
@@ -81,11 +82,11 @@ export const bids = async (dispatch) => {
 }  
 
 export const addBids = async (dispatch, bid) => { 
-    dispatch(requestStart()); 
+    dispatch(bidRequestStart()); 
     try {
         const res = await userRequest.post("/bids/store", bid);
-        dispatch(requestSuccess(res.data));
+        dispatch(bidRequestSuccess(res.data));
     } catch (err) {
-        dispatch(requestFailure(err.response.status));
+        dispatch(bidRequestFailure(err.response.status));
     }
 } 
