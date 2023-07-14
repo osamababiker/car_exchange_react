@@ -1,15 +1,15 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { Routes, Route } from 'react-router-dom';
 import { Home, Register, Login, Profile } from "./pages";
 
 import './App.css';
- 
+
 function App() {
 
   const user = useSelector((state) => state.user.currentUser);
-  
+
   return (
     <main className="App">
       <Routes>

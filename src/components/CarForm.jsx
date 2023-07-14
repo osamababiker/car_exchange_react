@@ -20,7 +20,7 @@ const CarForm = ({user}) => {
     const fileChange = (e) => {
         setPicture(e.files[0]);
     };
- 
+
     const handelAdd = (e) => {
         e.preventDefault();
         if(!name || !price || !model || !description || !picture){

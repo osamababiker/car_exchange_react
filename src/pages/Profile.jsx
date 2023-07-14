@@ -17,7 +17,6 @@ const Profile = () => {
         <section className="col-lg-8">
             <div className="row">
               <div className="col-md-6">
-          
               </div>
             </div>
             <CarForm user={user}/>

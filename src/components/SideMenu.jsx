@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import cookies from 'js-cookie';
 
 import { logout } from "../redux/apiCalls";
@@ -14,7 +13,6 @@ const SideMenu = ({carsList}) => {
   const user = useSelector((state) => state.user.currentUser);
   const currentLangCode = cookies.get('i18next') || 'ar';
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const handleLogout = async (e) => {
     e.preventDefault(); 
     await logout(dispatch);
