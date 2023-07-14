@@ -15,6 +15,7 @@
     "main_menu_password_recovery_link": "استعادة كلمة المرور",
 
     "account_breadcrumb_home_link": "الرئيسية",
+    "account_side_menu_add_car_link": "اضافة سيارة",
     "account_breadcrumb_account_link": "حسابي",
     "account_breadcrumb_account_title": "معلومات الحساب",
 
@@ -31,6 +32,7 @@
     "cars_place_bid_price": "اضف السعر الخاص بك",
     "cars_opening_price_label": "السعر الافتتاحي",
     "cars_height_price": "اعلى سعر",
+    "cars_modal_validation_error": "الرجاء ادخال جميع الحقول",
 
     "signin_modal_signin_btn": "تسجيل دخول",
     "signin_modal_signup_btn": "انشاء حساب",
@@ -46,7 +48,11 @@
     "signin_modal_confirm_password_label": "تأكيد كلمة المرور",
     "signin_modal_confirm_password_placeholder": "الرجاء تأكيد كلمة المرور",
     "signin_modal_error": "الايميل او كلمة المرور غير صحيحات",
+    "signin_modal_validation_error": "الايميل وكلمة المرور مطلوبان",
+    "signup_modal_validation_error": "الرجاء ادخال بيانات في كل الحقول",
 
+    "created_at": "تاريخ الاضافة",
+    "created_by": "بواسطة",
     "aed": "درهم",
     "dolar": "امريكي $",
     "checkout_message": "مجموع السلة",

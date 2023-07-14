@@ -1,24 +1,12 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { useSelector, useDispatch } from 'react-redux';
-import { logout } from "../redux/apiCalls";
-import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 import { Header, Footer, SideMenu, CarForm } from "../components";
 
 const Profile = () => { 
 
-  const { t } = useTranslation();
-  const carsList = useSelector(state => state.carsList.currentList); 
+  const carsList = useSelector(state => state.carsList.currentList);
   const user = useSelector((state) => state.user.currentUser);
-  
-  const dispatch = useDispatch(); 
-  const navigate = useNavigate();
-  const handleLogout = async (e) => {
-    e.preventDefault(); 
-    await logout(dispatch);
-    navigate("/"); 
-  } 
 
   return (
     <>
@@ -27,10 +15,15 @@ const Profile = () => {
       <div className="row">
         <SideMenu carsList={carsList}/>
         <section className="col-lg-8">
+            <div className="row">
+              <div className="col-md-6">
+          
+              </div>
+            </div>
             <CarForm user={user}/>
         </section>
       </div>
-    </div> 
+    </div>
     <Footer />
     </>
   );

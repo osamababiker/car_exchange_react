@@ -5,14 +5,14 @@ import { publicRequest, userRequest } from "../requestMethod";
 
 /** auth api calls  */
 export const login = async (dispatch, user) => {
-    dispatch(loginStart()); 
+    dispatch(loginStart());
     try {
         const res = await publicRequest.post("/auth/login", user);
         dispatch(loginSuccess(res.data));
     } catch (err) {
         dispatch(loginFailure(err.response.status));
     }
-}   
+}
 
 export const register = async (dispatch, user) => {
     dispatch(loginStart());
@@ -38,7 +38,7 @@ export const logout = async (dispatch) => {
     try {
         const res = await userRequest.get("/auth/logout");
         dispatch(logoutSuccess(res.data));
-    } catch (err) {
+    } catch (err) { 
         console.log(err);
     }
 }

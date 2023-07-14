@@ -21,10 +21,10 @@ const userSlice = createSlice({
             state.currentUser = action.payload.user;
             state.accessToken = action.payload.token;
             cookies.set('token', state.accessToken);
-            window.location.reload(false);
+            window.location.replace('#/profile'); 
         },
         loginFailure: (state, action) => {
-            state.isFetching = false;
+            state.isFetching = false; 
             state.error = true;
             state.errorCode = action.payload
         },
@@ -35,6 +35,7 @@ const userSlice = createSlice({
             state.currentUser = null;
             state.accessToken = null;
             cookies.set('token', null);
+            window.location.replace('#/'); 
         }
     }
 });

@@ -44,8 +44,8 @@ const Cars = ({cars}) => {
               <div className="">
                 <p className="pt-4">{car.description}</p>
                 <div className="d-flex justify-content-around">
-                  <span className="badge bg-dark">{ car.user.name }</span>
-                  <span className="badge bg-dark"> 
+                  <span className="badge bg-dark">{t('created_by')} : { car.user.name }</span>
+                  <span className="badge bg-dark"> {t('created_at')} : 
                   <Moment format="YYYY/MM/DD">{ car.created_at }</Moment> </span>
                 </div>
               </div>

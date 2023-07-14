@@ -30,12 +30,13 @@
     "cars_place_bid_btn": "Place new Bid",
     "cars_place_bid_price": "Add Your Price",
     "cars_opening_price_label": "Opening Price",
-    "cars_height_price": "the highest price",
+    "cars_height_price": "the highest bid",
+    "cars_modal_validation_error": "Please enter all the fields",
 
 
     "account_side_menu_title": "Dashboard",
     "account_side_menu_label": "Account menu",
-    "account_side_menu_cars_link": "My Cars",
+    "account_side_menu_add_car_link": "Add Car",
     "account_side_menu_carsList_link": "cars List",
     "account_side_menu_account_settings_label": "Account settings",
     "account_side_menu_info_link": "Profile info",
@@ -56,10 +57,13 @@
     "signin_modal_confirm_password_label": "Confirm password",
     "signin_modal_confirm_password_placeholder": "Please Confirm password",
     "signin_modal_error": "Email and/or Password not correct",
+    "signin_modal_validation_error": "Email and Password are required",
+    "signup_modal_validation_error": "Please enter all the fields",
 
 
 
-
+    "created_at": "created at",
+    "created_by": "created by",
     "aed": "AED",
     "dolar": "USD $",
     "checkout_message": "Cart Total is",

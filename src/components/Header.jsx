@@ -44,14 +44,14 @@ const Header = () => {
             <ul className="dropdown-menu dropdown-menu-end">
               <li>
                 <a className="dropdown-item" href="#signin-modal" data-bs-toggle="modal">
-                  <i className="ci-heart text-muted me-2"></i> { t('main_menu_whishlist_link') } ( 4 ) 
+                  <i className="ci-heart text-muted me-2"></i> ( 4 ) 
                 </a>
               </li>
             </ul>
           </div>
           <div className="d-none d-md-block ms-3 text-nowrap">
             <a className="topbar-link d-none d-md-inline-block" href="#signin-modal" data-bs-toggle="modal">
-              <i className="ci-heart mt-n1"></i> { t('main_menu_whishlist_link') } ( 4 )
+              <i className="ci-heart mt-n1"></i> ( 4 )
             </a>
           </div>
         </div>
@@ -84,27 +84,12 @@ const Header = () => {
                   </RouterLink>
                 }
               <div className={`navbar-tool dropdown ${currentLangCode === 'ar' ? 'me-3' : 'ms-3'}`}>
-                <RouterLink className='navbar-tool-icon-box bg-secondary dropdown-toggle' to='/cart'>
+                <RouterLink className='navbar-tool-icon-box bg-secondary dropdown-toggle' to='/'>
                   <span className="navbar-tool-label">4</span><i className="navbar-tool-icon ci-cart"></i>
                 </RouterLink>
-                <RouterLink className='navbar-tool-text' to='/cart'>
+                <RouterLink className='navbar-tool-text' to='/'>
                   <small>{t('top_header_cart_link')}</small> 600 { t('aed') }
                 </RouterLink>
-                <div className={`dropdown-menu ${currentLangCode === 'ar' ? 'dropdown-menu-start' : 'dropdown-menu-end'}`}> 
-                  <div className="widget widget-cart px-3 pt-2 pb-3" style={{ width: "20rem" }}>
-
-                    <div  style={{ height: "15rem" }} data-simplebar data-simplebar-auto-hide="false">
-
-                    </div>
-
-                    <div className="d-flex flex-wrap justify-content-between align-items-center py-3">
-                      <div className="fs-sm me-2 py-2"><span className="text-muted"> {t('top_header_cart_total')} : </span><span className="text-accent fs-base ms-1"> 600 { t('aed') } </span></div>
-                    </div>
-                      <RouterLink className='btn btn-primary btn-sm d-block w-100' to='/checkout'>
-                        {t('top_header_cart_checkout_link')} <i className="ci-card me-2 fs-base align-middle"></i>
-                      </RouterLink>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -13,16 +13,22 @@ const Login = () => {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [validationError, setValidationError] = useState("");
   const device_name = 'windows';
 
   const dispatch = useDispatch();
   const { isFetching, error, errorCode } = useSelector((state) => state.user);
 
   const handleLogin = async (e) => {
-    e.preventDefault(); 
-    await login(dispatch, {email, password, device_name}); 
+    e.preventDefault();
+    if(!email || !password){
+      setValidationError(t('signin_modal_validation_error'));
+    }else{
+      setValidationError("");
+      await login(dispatch, {email, password, device_name});
+    }
   }
- 
+
   return (
     <>
         <Header/>
@@ -32,13 +38,13 @@ const Login = () => {
                 <form className="needs-validation" autoComplete="off" noValidate >
                 <div className="mb-3">
                   <label className="form-label" htmlFor="si-email">{t('signin_modal_email_label')}</label>
-                  <input onChange={(e) => setEmail(e.target.value)} className="form-control" type="email" id="si-email" placeholder={t('signin_modal_email_placeholder')} required />
+                  <input required onChange={(e) => setEmail(e.target.value)} className="form-control" type="email" id="si-email" placeholder={t('signin_modal_email_placeholder')}  />
                   <div className="invalid-feedback"></div>
                 </div>
                 <div className="mb-3">
                   <label className="form-label" htmlFor="si-password">{t('signin_modal_password_label')}</label>
                   <div className="password-toggle">
-                    <input onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder={t('signin_modal_password_placeholder')} type="password" id="si-password" required />
+                    <input required onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder={t('signin_modal_password_placeholder')} type="password" id="si-password"  />
                     <label className="password-toggle-btn" aria-label="Show/hide password">
                       <input className="password-toggle-check" type="checkbox" /><span className="password-toggle-indicator"></span>
                     </label>
@@ -52,7 +58,13 @@ const Login = () => {
                   </RouterLink>
                 </div>
                 <button onClick={handleLogin} disabled={isFetching} className={`btn btn-primary btn-shadow d-block w-100 ${isFetching ? ' btn-disabled ' : ''}`} type="submit">{t('signin_modal_signin_btn')}</button>
-                {error && <div className='alert alert-danger mt-2' role="alert">{ errorCode === 401 ? t('signin_modal_error') : t('general_error')  }</div>  }
+                {
+                  validationError ?
+                  <div className='alert alert-danger mt-2' role="alert">{ validationError  }</div>  
+                  :
+                  error && <div className='alert alert-danger mt-2' role="alert">{ errorCode === 401 ? t('signin_modal_error')  : t('general_error')  }</div>
+                }
+
               </form>
               </div>
             </div>

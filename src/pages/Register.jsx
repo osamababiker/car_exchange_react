@@ -15,20 +15,20 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [password_confirmation, setPasswordConfirmation] = useState("");
-  const device_name = 'windows'; 
+  const [validationError, setValidationError] = useState("");
+  const device_name = 'windows';
 
   const dispatch = useDispatch();
   const { isFetching, error, errorCode } = useSelector((state) => state.user);
 
-  const handelRegister = (e) => {
+  const handelRegister = async (e) => {
     e.preventDefault();
-    register(dispatch, {
-      name,
-      email,
-      password,
-      password_confirmation,
-      device_name
-    }); 
+    if(!name || !email || !password){
+      setValidationError(t('signup_modal_validation_error'));
+    }else{
+      setValidationError("");
+      await register(dispatch, {name,email,password,password_confirmation,device_name});
+    }
   }
 
   return (
@@ -74,7 +74,12 @@ const Register = () => {
                   </RouterLink>
                 </div>
                   <button onClick={handelRegister}  className='btn btn-primary btn-shadow d-block w-100' type="submit">{t('signin_modal_signup_btn')}</button>
-                  {error && <div className='alert alert-danger mt-2' role="alert">{ errorCode === 401 ? t('signin_modal_error') : t('general_error')  }</div>  }
+                  {
+                    validationError ?
+                    <div className='alert alert-danger mt-2' role="alert">{ validationError  }</div>  
+                    :
+                    error && <div className='alert alert-danger mt-2' role="alert">{ errorCode === 401 ? t('signin_modal_error')  : t('general_error')  }</div>
+                  }
                 </form>
               </div>
             </div>

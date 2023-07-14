@@ -18,7 +18,6 @@ const SideMenu = ({carsList}) => {
   const handleLogout = async (e) => {
     e.preventDefault(); 
     await logout(dispatch);
-    navigate("/");
   } 
 
   return (
@@ -39,21 +38,15 @@ const SideMenu = ({carsList}) => {
             </div>
             <ul className="list-unstyled mb-0">
               <li className="border-bottom mb-0">
-                <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/">
-                  {t('account_side_menu_cars_link')}  
-                  <span className="fs-sm text-muted me-auto"></span> <i className="ci-bag opacity-60 me-2"></i> 
-                </RouterLink>
-              </li>
-              <li className="border-bottom mb-0">
-                <RouterLink className="nav-link-style d-flex align-items-center px-4 py-3" to="/profile"> 
-                  {t('account_side_menu_info_link')} <span className="fs-sm text-muted me-auto"></span><i className="ci-user opacity-60 me-2"></i>
-                </RouterLink>
+                <a href="#car-modal"  data-bs-toggle="modal" className="nav-link-style d-flex align-items-center px-4 py-3">
+                  {t('account_side_menu_add_car_link')}  
+                  <span className="fs-sm text-muted me-auto"></span> <i className="ci-add opacity-60 me-2"></i> 
+                </a>
               </li>
               <li className="border-top mb-0">
                 <a className="nav-link-style d-flex align-items-center px-4 py-3" onClick={handleLogout} href="#logout"> 
-                  {t('account_signout_link')} <span className="fs-sm text-muted me-auto">
-                    <i className="ci-sign-out opacity-60 me-2"></i> 
-                    </span>
+                  {t('account_signout_link')} <span className="fs-sm text-muted me-auto"></span>
+                  <i className="ci-sign-out opacity-60 me-2"></i> 
                 </a>
               </li>
             </ul>
